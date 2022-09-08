@@ -1,19 +1,51 @@
 // let mobileMenuDropdown = document.querySelectorAll(".parent");
-document.querySelectorAll(".navbar-nav > .parent").forEach(md => md.addEventListener("click", () => {
-  	md.querySelector(".sub-nav").classList.toggle("show");
-}));
+document.querySelectorAll(".navbar-nav > .parent").forEach((md) =>
+	md.addEventListener("click", () => {
+		md.querySelector(".sub-nav").classList.toggle("show");
+	})
+);
 
 const hero = document.getElementById("hero");
 
 if (hero) {
 	// Hero - Text animation
 	gsap.set("svg#hero-svg", { y: 10 });
-	gsap.set(".blue-topleft", { x: -165, y: -125, scale: 0.75, transformOrigin: "bottom right" });
-	gsap.set(".blue-topright", { x: 640, y: -125, scale: 0.75, transformOrigin: "bottom left" });
-	gsap.set(".blue-top", { x: 240, y: -640, scale: 0.75, transformOrigin: "center" });
-	gsap.set(".blue-bottom", { x: 0, y: 220, scale: 0.75, transformOrigin: "center" });
-	gsap.set(".blue-bottomleft", { x: -165, y: 125, scale: 0.75, transformOrigin: "top right" });
-	gsap.set(".blue-bottomright", { x: 640, y: 125, scale: 0.75, transformOrigin: "top left" });
+	gsap.set(".blue-topleft", {
+		x: -165,
+		y: -125,
+		scale: 0.75,
+		transformOrigin: "bottom right"
+	});
+	gsap.set(".blue-topright", {
+		x: 640,
+		y: -125,
+		scale: 0.75,
+		transformOrigin: "bottom left"
+	});
+	gsap.set(".blue-top", {
+		x: 240,
+		y: -640,
+		scale: 0.75,
+		transformOrigin: "center"
+	});
+	gsap.set(".blue-bottom", {
+		x: 0,
+		y: 220,
+		scale: 0.75,
+		transformOrigin: "center"
+	});
+	gsap.set(".blue-bottomleft", {
+		x: -165,
+		y: 125,
+		scale: 0.75,
+		transformOrigin: "top right"
+	});
+	gsap.set(".blue-bottomright", {
+		x: 640,
+		y: 125,
+		scale: 0.75,
+		transformOrigin: "top left"
+	});
 	gsap.set(".red-bottomright", { x: 100, y: 190, scale: 1.25 });
 	gsap.set(".red-topright", { x: 150, y: 0, scale: 1.25 });
 	gsap.set(".red-bottomleft", { x: -160, y: -80, scale: 1.25 });
@@ -39,21 +71,45 @@ if (hero) {
 			},
 			"<"
 		)
-		.to(".blue-top", { x: 240, y: -415, scale: 1, duration: 3, transformOrigin: "center" }, "<")
-		.to(".blue-bottom", { x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "center" }, "<")
-		.to(".blue-topleft", { x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "bottom right" }, "<")
-		.to(".blue-topright", { x: 480, y: 0, scale: 1, duration: 3, transformOrigin: "bottom left" }, "<")
-		.to(".blue-bottomleft", { x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "top right" }, "<")
-		.to(".blue-bottomright", { x: 480, y: 0, scale: 1, duration: 3, transformOrigin: "top left" }, "<")
+		.to(
+			".blue-top",
+			{ x: 240, y: -415, scale: 1, duration: 3, transformOrigin: "center" },
+			"<"
+		)
+		.to(
+			".blue-bottom",
+			{ x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "center" },
+			"<"
+		)
+		.to(
+			".blue-topleft",
+			{ x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "bottom right" },
+			"<"
+		)
+		.to(
+			".blue-topright",
+			{ x: 480, y: 0, scale: 1, duration: 3, transformOrigin: "bottom left" },
+			"<"
+		)
+		.to(
+			".blue-bottomleft",
+			{ x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "top right" },
+			"<"
+		)
+		.to(
+			".blue-bottomright",
+			{ x: 480, y: 0, scale: 1, duration: 3, transformOrigin: "top left" },
+			"<"
+		)
 		.to(".red-top", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-bottom", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-topleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-topright", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomright", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
-		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<")
+		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<");
 
-	const heroHeadings = gsap.utils.toArray(".animate-text"); 
+	const heroHeadings = gsap.utils.toArray(".animate-text");
 	heroHeadings.forEach((text, i) => {
 		gsap.from(text, {
 			scrollTrigger: {
@@ -80,7 +136,19 @@ if (hero) {
 			text: "",
 			duration: 1
 		});
-	});	
+	});
+}
+
+const multiplePerspectives = document.getElementById("multiple-perspectives");
+
+if (multiplePerspectives) {
+	let multPerspecivesWidth = $("#multiple-perspectives .mp-outer").width();
+	$("#multiple-perspectives .mp-outer").height(multPerspecivesWidth);
+	
+	$(window).resize(function() {
+		let multPerspecivesWidth = $("#multiple-perspectives .mp-outer").width();
+		$("#multiple-perspectives .mp-outer").height(multPerspecivesWidth);
+	});
 }
 
 // YouTube scripts
@@ -250,8 +318,31 @@ if (grid) {
 			this.shuffle.sort(options);
 		}
 	}
-	
+
 	document.addEventListener("DOMContentLoaded", () => {
 		window.demo = new Demo(document.getElementById("grid"));
 	});
 }
+
+const flipCards = document.getElementById("flip-cards");
+
+if (flipCards) {
+	let wrapper = document.querySelector(".wrapper");
+	let parentCard = document.querySelector(".card");
+	let cardCount = 3; // make bigger
+
+	let cards = gsap.utils.toArray(".card > .faces");
+
+	cards.forEach(function (card, index) {
+		let animation = gsap.timeline();
+		animation.to(card, { rotationY: 180 });
+		animation.progress(1);
+		card.animation = animation;
+		card.addEventListener("click", function () {
+			card.animation.reversed(!card.animation.reversed());
+		});
+	});
+
+	gsap.set(wrapper, { autoAlpha: 1 });
+	gsap.from(".card", { opacity: 0, stagger: 0.2 });
+} 
