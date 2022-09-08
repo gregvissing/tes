@@ -929,7 +929,7 @@ header #search-toggle svg {
   }
 }
 #hero > .container {
-  height: 300px;
+  height: 350px;
 }
 @media only screen and (max-width: 1000px) {
   #hero > .container {
