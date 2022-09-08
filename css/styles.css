@@ -1378,6 +1378,7 @@ main .btn:hover {
 @media only screen and (max-width: 991px) {
   .flip-cards .card {
     width: 100%;
+    margin-bottom: 1em;
   }
 }
 
