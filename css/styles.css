@@ -1326,7 +1326,7 @@ main .btn:hover {
 }
 
 .flip-cards {
-  visibility: hidden !important;
+  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
