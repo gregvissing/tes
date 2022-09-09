@@ -222,6 +222,17 @@ if (grid) {
 		}
 	});
 	$(".fac-staff .content p:nth-child(2)").height(maxHeightElement);
+	
+	var maxHeightFac = 0,
+		maxHeightElementFac = null,
+		maxSubNavHeightFac = 0;
+	$(".fac-staff > div").each(function () {
+		if ($(this).height() > maxHeightFac) {
+			maxHeightFac = $(this).height();
+			maxHeightElementFac = $(this);
+		}
+	});
+	$(".fac-staff > div").height(maxHeightElementFac);
 
 	var Shuffle = window.Shuffle;
 
