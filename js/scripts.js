@@ -143,42 +143,45 @@ const multiplePerspectives = document.getElementById("multiple-perspectives");
 if (multiplePerspectives) {
 	let multPerspecivesWidth = $("#multiple-perspectives .mp-outer").width();
 	$("#multiple-perspectives .mp-outer").height(multPerspecivesWidth);
-	
-	$(window).resize(function() {
+
+	$(window).resize(function () {
 		let multPerspecivesWidth = $("#multiple-perspectives .mp-outer").width();
 		$("#multiple-perspectives .mp-outer").height(multPerspecivesWidth);
 	});
 }
 
 // YouTube scripts
-var players = document.querySelectorAll(".youtube-player");
-var playBtn = document.querySelector(".bi-play-btn-fill");
+const video = document.getElementById("video");
+if (video) {
+	var players = document.querySelectorAll(".youtube-player");
+	var playBtn = document.querySelector(".bi-play-btn-fill");
 
-var loadPlayer = function (event) {
-	var target = event.currentTarget;
-	var iframe = document.createElement("iframe");
+	var loadPlayer = function (event) {
+		var target = event.currentTarget;
+		var iframe = document.createElement("iframe");
 
-	iframe.height = target.clientHeight;
-	iframe.width = target.clientWidth;
-	iframe.src =
-		"https://www.youtube.com/embed/" + target.dataset.videoId + "?autoplay=1";
-	iframe.setAttribute("frameborder", 0);
+		iframe.height = target.clientHeight;
+		iframe.width = target.clientWidth;
+		iframe.src =
+			"https://www.youtube.com/embed/" + target.dataset.videoId + "?autoplay=1";
+		iframe.setAttribute("frameborder", 0);
 
-	target.classList.remove("pristine");
-	playBtn.style.display = "none";
+		target.classList.remove("pristine");
+		playBtn.style.display = "none";
 
-	if (target.children.length) {
-		target.replaceChild(iframe, target.firstElementChild);
-	} else {
-		target.appendChild(iframe);
-	}
-};
+		if (target.children.length) {
+			target.replaceChild(iframe, target.firstElementChild);
+		} else {
+			target.appendChild(iframe);
+		}
+	};
 
-var config = { once: true };
+	var config = { once: true };
 
-Array.from(players).forEach(function (player) {
-	player.addEventListener("click", loadPlayer, config);
-});
+	Array.from(players).forEach(function (player) {
+		player.addEventListener("click", loadPlayer, config);
+	});
+}
 
 // Search bar toggle
 const searchToggle = document.getElementById("search-toggle");
@@ -192,29 +195,21 @@ searchToggle.addEventListener("click", () => {
 });
 
 // Faculty/Staff Directory - sort
-var maxHeight = 0,
-	maxHeightElement = null,
-	maxSubNavHeight = 0;
-$(".fac-staff .content p:nth-child(2)").each(function () {
-	if ($(this).height() > maxHeight) {
-		maxHeight = $(this).height();
-		maxHeightElement = $(this);
-	}
-});
-
-$(".fac-staff .content p:nth-child(2)").height(maxHeight);
-
-$(".sub-nav").each(function () {
-	if ($(this).height() > maxSubNavHeight) {
-		maxSubNavHeight = $(this).height();
-		maxHeightElement = $(this);
-	}
-	// console.log(maxSubNavHeight);
-});
-
 const grid = document.getElementById("grid");
 
 if (grid) {
+	var maxHeight = 0,
+		maxHeightElement = null,
+		maxSubNavHeight = 0;
+	$(".fac-staff .content p:nth-child(2)").each(function () {
+		if ($(this).height() > maxHeight) {
+			maxHeight = $(this).height();
+			maxHeightElement = $(this);
+		}
+	});
+
+	$(".fac-staff .content p:nth-child(2)").height(maxHeight);
+
 	var Shuffle = window.Shuffle;
 
 	class Demo {
@@ -344,4 +339,4 @@ if (flipCards) {
 
 	gsap.set(wrapper, { autoAlpha: 1 });
 	gsap.from(".card", { opacity: 0, stagger: 0.2 });
-} 
+}
