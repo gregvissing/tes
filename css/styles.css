@@ -1327,12 +1327,18 @@ header #search-toggle svg {
 main .btn-primary {
   border-radius: 0;
   transition: all 0.4s ease-in-out;
-  background: #002c48 !important;
+  background: #002c48;
+  position: relative;
 }
-main .btn-primary:hover {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0063b0+0,002c48+99 */
-  background: #0063b0;
-  /* Old browsers */
+main .btn-primary:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
   background: -moz-linear-gradient(left, #0063b0 0%, #002c48 99%) !important;
   /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #0063b0 0%, #002c48 99%) !important;
@@ -1341,6 +1347,9 @@ main .btn-primary:hover {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0063b0", endColorstr="#002c48",GradientType=1 );
   /* IE6-9 */
+}
+main .btn-primary:hover {
+  background: transparent;
 }
 
 .flip-cards {
