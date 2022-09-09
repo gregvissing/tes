@@ -1369,30 +1369,41 @@ main .btn-primary:hover {
 }
 .flip-cards .card .faces .face.front {
   /*added for mobile browsers*/
-  transform: translateZ(1px);
+  overflow: hidden;
+  /*
+  &:before {
+  	content: "";
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	z-index: 0;
+  	background: rgba(0, 99, 176, 0.7);
+  	clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
+  */
+}
+.flip-cards .card .faces .face.front div {
+  position: absolute;
+  top: 150%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 220px;
+  width: 100%;
+  background: rgba(0, 99, 176, 0.7);
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .flip-cards .card .faces .face.front p {
   position: relative;
 }
-.flip-cards .card .faces .face.front:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  background: rgba(0, 99, 176, 0.7);
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-}
 .flip-cards .card .faces .face.front * {
   backface-visibility: hidden;
-}
-.flip-cards .card .faces .face.back {
-  transform: rotateY(180deg);
-  color: white;
-  position: relative;
 }
 @media only screen and (max-width: 991px) {
   .flip-cards .card {
