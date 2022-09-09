@@ -1079,6 +1079,9 @@ header #search-toggle svg {
   color: #fff;
   background-color: var(--unnamed-color-0063b0);
 }
+.accordion .accordion-button:after {
+  display: none;
+}
 .accordion .accordion-button:before {
   flex-shrink: 0;
   width: 1.25rem;
