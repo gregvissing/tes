@@ -1325,7 +1325,6 @@ header #search-toggle svg {
 
 main .btn {
   border-radius: 0;
-  transition: all 0.4s ease-in-out;
   background: var(--unnamed-color-002c48);
 }
 main .btn:hover {
