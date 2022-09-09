@@ -1325,7 +1325,7 @@ header #search-toggle svg {
 
 main .btn {
   border-radius: 0;
-  transition: background-color 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 main .btn:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0063b0+0,002c48+99 */
