@@ -1166,12 +1166,15 @@ header #search-toggle svg {
   line-height: 26px;
   font-weight: 600;
   margin-bottom: 0.5em;
+  height: 26px;
 }
 .fac-staff .content p:nth-child(2) {
   margin-bottom: 1.5em;
+  height: 50px;
 }
 .fac-staff .content p:last-child {
   text-transform: uppercase;
+  height: 26px;
 }
 .fac-staff .content p a {
   font-size: 18px;
