@@ -1333,11 +1333,11 @@ main .btn-primary:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0063b0+0,002c48+99 */
   background: #0063b0;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #0063b0 0%, #002c48 99%);
+  background: -moz-linear-gradient(left, #0063b0 0%, #002c48 99%) !important;
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #0063b0 0%, #002c48 99%);
+  background: -webkit-linear-gradient(left, #0063b0 0%, #002c48 99%) !important;
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #0063b0 0%, #002c48 99%);
+  background: linear-gradient(to right, #0063b0 0%, #002c48 99%) !important;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0063b0", endColorstr="#002c48",GradientType=1 );
   /* IE6-9 */
