@@ -222,7 +222,7 @@ if (grid) {
 		}
 	});
 
-	$(".fac-staff .content p:nth-child(2)").height(maxHeight);
+	$(".fac-staff .content p:nth-child(2)").height(maxHeightElement);
 
 	var Shuffle = window.Shuffle;
 
