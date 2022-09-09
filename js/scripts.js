@@ -330,26 +330,3 @@ if (grid) {
 		window.demo = new Demo(document.getElementById("grid"));
 	});
 }
-
-const flipCards = document.getElementById("flip-cards");
-
-if (flipCards) {
-	let wrapper = document.querySelector(".wrapper");
-	let parentCard = document.querySelector(".card");
-	let cardCount = 3; // make bigger
-
-	let cards = gsap.utils.toArray(".card > .faces");
-
-	cards.forEach(function (card, index) {
-		let animation = gsap.timeline();
-		animation.to(card, { rotationY: 180 });
-		animation.progress(1);
-		card.animation = animation;
-		card.addEventListener("click", function () {
-			card.animation.reversed(!card.animation.reversed());
-		});
-	});
-
-	gsap.set(wrapper, { autoAlpha: 1 });
-	gsap.from(".card", { opacity: 0, stagger: 0.2 });
-}
