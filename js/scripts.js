@@ -6,7 +6,7 @@ document.querySelectorAll(".navbar-nav > .parent").forEach((md) =>
 
 let containers = document.querySelectorAll("section.lazy");
 containers.forEach( (element) => {
-	let columns = element.querySelectorAll("section .container");
+	let columns = element.querySelectorAll("section > *");
 	let tl = gsap.timeline()
   		.from(columns, {y:200, stagger:0.1, opacity: 0}, 0)
 	
