@@ -221,7 +221,7 @@ if (grid) {
 			maxHeightElement = $(this);
 		}
 	});
-
+	console.log(maxHeightElement);
 	$(".fac-staff .content p:nth-child(2)").height(maxHeightElement);
 
 	var Shuffle = window.Shuffle;
