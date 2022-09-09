@@ -1389,9 +1389,13 @@ main .btn-primary:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: top 1s ease-in-out;
 }
 .flip-cards .card .faces .face.front p {
   position: relative;
+}
+.flip-cards .card .faces .face.front:hover div {
+  top: 0%;
 }
 @media only screen and (max-width: 991px) {
   .flip-cards .card {
