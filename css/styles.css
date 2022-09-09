@@ -1074,7 +1074,7 @@ header #search-toggle svg {
   font-family: "Oswald", sans-serif;
   font-size: 25px;
   line-height: 36px;
-  padding: 1rem 1.25rem 1rem 3rem;
+  padding: 1rem 1.25rem 1rem 3.5rem;
 }
 .accordion .accordion-button:not(.collapsed) {
   color: #fff;
