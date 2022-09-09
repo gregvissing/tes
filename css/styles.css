@@ -1324,11 +1324,11 @@ header #search-toggle svg {
   }
 }
 
-main .btn {
+main .btn-primary {
   border-radius: 0;
-  background: var(--unnamed-color-002c48);
+  transition: all 0.4s ease-in-out;
 }
-main .btn:hover {
+main .btn-primary:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0063b0+0,002c48+99 */
   background: #0063b0;
   /* Old browsers */
