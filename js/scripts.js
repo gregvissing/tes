@@ -73,14 +73,14 @@ if (hero) {
 		.to(".animate-text-challenging", {
 			text: "Challenging",
 			ease: "power1.in",
-			duration: 1
+			duration: 1.5
 		})
 		.to(
 			".animate-text-minds",
 			{
 				text: "Minds",
 				ease: "power1.in",
-				duration: 1
+				duration: 1.5
 			},
 			"<"
 		)
@@ -147,7 +147,7 @@ if (hero) {
 				toggleActions: "play none none none"
 			},
 			text: "",
-			duration: 1
+			duration: 1.5
 		});
 	});
 }
