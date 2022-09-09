@@ -1081,7 +1081,7 @@ header #search-toggle svg {
 }
 
 .accordion .accordion-item {
-  background-color: unset !important;
+  background-color: var(--unnamed-color-0063b0) !important;
 }
 .accordion .accordion-button {
   font-family: "Oswald", sans-serif;
