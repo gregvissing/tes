@@ -1241,7 +1241,7 @@ header #search-toggle svg {
 #multiple-perspectives .mp-container .mp-outer:hover .mp-inner {
   opacity: 1;
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   #multiple-perspectives h2,
 #multiple-perspectives .mp-container {
     position: relative !important;
