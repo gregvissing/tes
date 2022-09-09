@@ -1353,6 +1353,11 @@ main .btn-primary:hover {
   cursor: pointer;
   width: 30%;
 }
+@media screen and (max-width: 700px) {
+  .flip-cards .card {
+    width: 100%;
+  }
+}
 .flip-cards .card .faces {
   width: 100%;
   height: 220px;
@@ -1368,21 +1373,7 @@ main .btn-primary:hover {
   backface-visibility: hidden;
 }
 .flip-cards .card .faces .face.front {
-  /*added for mobile browsers*/
   overflow: hidden;
-  /*
-  &:before {
-  	content: "";
-  	position: absolute;
-  	top: 0;
-  	bottom: 0;
-  	left: 0;
-  	right: 0;
-  	z-index: 0;
-  	background: rgba(0, 99, 176, 0.7);
-  	clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  }
-  */
 }
 .flip-cards .card .faces .face.front div {
   position: absolute;
@@ -1401,9 +1392,6 @@ main .btn-primary:hover {
 }
 .flip-cards .card .faces .face.front p {
   position: relative;
-}
-.flip-cards .card .faces .face.front * {
-  backface-visibility: hidden;
 }
 @media only screen and (max-width: 991px) {
   .flip-cards .card {
