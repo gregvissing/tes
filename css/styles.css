@@ -1040,9 +1040,9 @@ header #search-toggle svg {
     width: 100% !important;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container, .container-md, .container-sm {
-    max-width: 95%;
+    max-width: 95% !important;
   }
 }
 .card {
