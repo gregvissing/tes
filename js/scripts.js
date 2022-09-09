@@ -4,6 +4,20 @@ document.querySelectorAll(".navbar-nav > .parent").forEach((md) =>
 	})
 );
 
+let containers = document.querySelectorAll("section.lazy");
+containers.forEach( (element) => {
+	let columns = element.querySelectorAll("section .container");
+	let tl = gsap.timeline()
+  		.from(columns, {y:200, stagger:0.1, opacity: 0}, 0)
+	
+	ScrollTrigger.create({
+		trigger:element,
+		start:"top 90%",
+		toggleActions:"play none none none",
+		animation:tl
+	})
+})
+
 const hero = document.getElementById("hero");
 
 if (hero) {
@@ -77,7 +91,7 @@ if (hero) {
 		)
 		.to(
 			".blue-bottom",
-			{ x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "center" },
+			{ x: 0, y: -4.5, scale: 1, duration: 3, transformOrigin: "center" },
 			"<"
 		)
 		.to(
@@ -101,7 +115,7 @@ if (hero) {
 			"<"
 		)
 		.to(".red-top", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
-		.to(".red-bottom", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
+		.to(".red-bottom", { x: 0, y: -4.6, scale: 1, duration: 3 }, "<")
 		.to(".red-topleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-topright", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
