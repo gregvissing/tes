@@ -1,4 +1,3 @@
-// let mobileMenuDropdown = document.querySelectorAll(".parent");
 document.querySelectorAll(".navbar-nav > .parent").forEach((md) =>
 	md.addEventListener("click", () => {
 		md.querySelector(".sub-nav").classList.toggle("show");
