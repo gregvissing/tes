@@ -847,6 +847,14 @@ header .menu {
 header #search-bar {
   display: none;
 }
+@media screen and (max-width: 700px) {
+  header #search-bar {
+    position: absolute;
+    width: 250px;
+    top: 160%;
+    left: -90%;
+  }
+}
 header #search-toggle {
   display: flex;
   flex-wrap: nowrap;
