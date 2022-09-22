@@ -29,42 +29,42 @@ if (hero) {
 		y: 78,			// 200
 		scale: 1.5,		// 1.93
 		transformOrigin: "bottom right"
-	});
+	}, "-=1");
 	
 	gsap.set(".blue-toprightt", {
 		x: 465,			// 305
 		y: 78,			// 200
 		scale: 1.5,	// 1.93
 		transformOrigin: "bottom left"
-	});
+	}, "-=1");
 	
 	gsap.set(".blue-topp", {
 		x: 215,			// 215
 		y: -205,		// 23
 		scale: 1.5,		// 1.93
 		transformOrigin: "center"
-	});
+	}, "-=1");
 	
 	gsap.set(".blue-bottomm", {
 		x: 215,			// 215
 		y: 632,			// 402
 		scale: 1.5,	// 1.93
 		transformOrigin: "center"
-	});
+	}, "-=1");
 	
 	gsap.set(".blue-bottomleftt", {
 		x: -41,			// 125
 		y: 351,			// 225
 		scale: 1.5,	// 1.93
 		transformOrigin: "top right"
-	});
+	}, "-=1");
 	
 	gsap.set(".blue-bottomrightt", {
 		x: 465,			// 305
 		y: 351,			// 225
 		scale: 1.5,	// 1.93
 		transformOrigin: "top left"
-	});
+	}, "-=1");
 	
 	gsap.set(".red-bottomright", { x: 100, y: 190, scale: 1.25 });
 	gsap.set(".red-topright", { x: 150, y: 0, scale: 1.25 });
