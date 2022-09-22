@@ -96,7 +96,7 @@ if (hero) {
 		)
 		.to(
 			".blue-topleft",
-			{ x: 0, y: 0, scale: 1, duration: 3, transformOrigin: "bottom right" },
+			{ x: 1, y: 1, scale: 1, duration: 3, transformOrigin: "bottom right" },
 			"<"
 		)
 		.to(
