@@ -23,8 +23,8 @@ const hero = document.getElementById("hero");
 
 if (hero) {
 	// Hero - Text animation
-	gsap.set("svg#hero-svg", { y: 10 });
 	/*
+	gsap.set("svg#hero-svg", { y: 10 });
 	gsap.set(".blue-topleftt", {
 		x: -41,			// 125
 		y: 78,			// 200
