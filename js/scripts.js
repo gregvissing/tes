@@ -5,25 +5,26 @@ document.querySelectorAll(".navbar-nav > .parent").forEach((md) =>
 );
 
 let containers = document.querySelectorAll("section.lazy");
-containers.forEach( (element) => {
+containers.forEach((element) => {
 	let columns = element.querySelectorAll("section > *");
-	let tl = gsap.timeline()
-  		.from(columns, {y:200, stagger:0.1, opacity: 0}, 0)
-	
+	let tl = gsap
+		.timeline()
+		.from(columns, { y: 200, stagger: 0.1, opacity: 0 }, 0);
+
 	ScrollTrigger.create({
-		trigger:element,
-		start:"top 90%",
-		toggleActions:"play none none none",
-		animation:tl
-	})
-})
+		trigger: element,
+		start: "top 90%",
+		toggleActions: "play none none none",
+		animation: tl
+	});
+});
 
 const hero = document.getElementById("hero");
 
 if (hero) {
 	// Hero - Text animation
 	gsap.set("svg#hero-svg", { y: 10 });
-	
+	/*
 	gsap.set(".blue-topleftt", {
 		x: -41,			// 125
 		y: 78,			// 200
@@ -72,9 +73,9 @@ if (hero) {
 	gsap.set(".red-topleft", { x: -150, y: -230, scale: 1.25 });
 	gsap.set(".red-bottom", { x: -200, y: 120, scale: 1.25 });
 	gsap.set(".red-top", { x: 120, y: -240, scale: 1.25 });
-
+	*/
 	gsap.registerPlugin(ScrollTrigger);
-	
+
 	const tl = gsap.timeline();
 	tl
 		.to(".animate-text-challenging", {
@@ -92,41 +93,41 @@ if (hero) {
 			"<"
 		)
 		.to(
-			".blue-topp",
-			{ x: 215, y: 23, scale: 1.93, duration: 3, transformOrigin: "center" },
+			".blue-top",
+			{ x: 52.519, y: 11.858, scale: 1, duration: 3, transformOrigin: "top left" },
 			"<"
 		)
 		.to(
-			".blue-bottomm",
-			{ x: 215, y: 402, scale: 1.93, duration: 3, transformOrigin: "center" },
+			".blue-bottom",
+			{ x: 52.519, y: 99.552, scale: 1, duration: 3, transformOrigin: "top left" },
 			"<"
 		)
 		.to(
-			".blue-topleftt",
-			{ x: 125, y: 200, scale: 1.93, duration: 3, transformOrigin: "bottom right" },
+			".blue-topleft",
+			{ x: 18.519, y: 40.665, scale: 1, duration: 3, transformOrigin: "top left" },
 			"<"
 		)
 		.to(
-			".blue-toprightt",
-			{ x: 305, y: 200, scale: 1.93, duration: 3, transformOrigin: "bottom left" },
+			".blue-topright",
+			{ x: 85.781, y: 40.665, scale: 1, duration: 3, transformOrigin: "top left" },
 			"<"
 		)
 		.to(
-			".blue-bottomleftt",
-			{ x: 125, y: 225, scale: 1.93, duration: 3, transformOrigin: "top right" },
+			".blue-bottomleft",
+			{ x: 18.52, y: 70.109, scale: 1, duration: 3, transformOrigin: "top left" },
 			"<"
 		)
 		.to(
-			".blue-bottomrightt",
-			{ x: 305, y: 225, scale: 1.93, duration: 3, transformOrigin: "top left" },
+			".blue-bottomright",
+			{ x: 85.781, y: 70.109, scale: 1, duration: 3, transformOrigin: "top left" },
 			"<"
 		)
-		.to(".red-top", { x: 0, y: 5, scale: 1, duration: 3 }, "<")
-		.to(".red-bottom", { x: 3, y: -6, scale: 1, duration: 3 }, "<")
-		.to(".red-topleft", { x: 3, y: 3, scale: 1, duration: 3 }, "<")
-		.to(".red-topright", { x: 0, y: -3, scale: 1, duration: 3 }, "<")
-		.to(".red-bottomleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
-		.to(".red-bottomright", { x: 0, y: -5, scale: 1, duration: 3 }, "<")
+		.to(".red-top", { x: 69.224, y: 11.825, scale: 1, duration: 3 }, "<")
+		.to(".red-bottom", { x: 40.499, y: 99.637, scale: 1, duration: 3 }, "<")
+		.to(".red-topleft", { x: 18.891, y: 19.493, scale: 1, duration: 3 }, "<")
+		.to(".red-topright", { x: 102.876, y: 41.023, scale: 1, duration: 3 }, "<")
+		.to(".red-bottomleft", { x: 10.865, y: 70.109, scale: 1, duration: 3 }, "<")
+		.to(".red-bottomright", { x: 85.712, y: 99.635, scale: 1, duration: 3 }, "<")
 		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<");
 
 	const heroHeadings = gsap.utils.toArray(".animate-text");
