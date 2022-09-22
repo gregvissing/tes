@@ -957,20 +957,20 @@ header #search-toggle svg {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -9.25em;
+  top: 106%;
   margin: auto;
   overflow: visible !important;
 }
 @media only screen and (max-width: 1000px) {
   #hero #hero-svg {
     width: 350px;
-    bottom: -7em;
+    top: 103%;
   }
 }
 @media only screen and (max-width: 600px) {
   #hero #hero-svg {
     width: 250px;
-    bottom: -5em;
+    top: 100%;
   }
 }
 
