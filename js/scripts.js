@@ -119,7 +119,7 @@ if (hero) {
 		.to(".red-topleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-topright", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomleft", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
-		.to(".red-bottomright", { x: 0, y: 0, scale: 1, duration: 3 }, "<")
+		.to(".red-bottomright", { x: 0, y: -1, scale: 1, duration: 3 }, "<")
 		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<");
 
 	const heroHeadings = gsap.utils.toArray(".animate-text");
