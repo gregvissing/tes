@@ -42,59 +42,8 @@ if (hero) {
 		transformOrigin: "top left"
 	});
 	
-	/*
-	gsap.set("svg#hero-svg", { y: 10 });
-	gsap.set(".blue-topleftt", {
-		x: -41,			// 125
-		y: 78,			// 200
-		scale: 1.5,		// 1.93
-		transformOrigin: "bottom right"
-	});
-	
-	gsap.set(".blue-toprightt", {
-		x: 465,			// 305
-		y: 78,			// 200
-		scale: 1.5,	// 1.93
-		transformOrigin: "bottom left"
-	});
-	
-	gsap.set(".blue-topp", {
-		x: 215,			// 215
-		y: -205,		// 23
-		scale: 1.5,		// 1.93
-		transformOrigin: "center"
-	});
-	
-	gsap.set(".blue-bottomm", {
-		x: 215,			// 215
-		y: 632,			// 402
-		scale: 1.5,	// 1.93
-		transformOrigin: "center"
-	});
-	
-	gsap.set(".blue-bottomleftt", {
-		x: -41,			// 125
-		y: 351,			// 225
-		scale: 1.5,	// 1.93
-		transformOrigin: "top right"
-	});
-	
-	gsap.set(".blue-bottomrightt", {
-		x: 465,			// 305
-		y: 351,			// 225
-		scale: 1.5,	// 1.93
-		transformOrigin: "top left"
-	});
-	
-	gsap.set(".red-bottomright", { x: 100, y: 190, scale: 1.25 });
-	gsap.set(".red-topright", { x: 150, y: 0, scale: 1.25 });
-	gsap.set(".red-bottomleft", { x: -160, y: -80, scale: 1.25 });
-	gsap.set(".red-topleft", { x: -150, y: -230, scale: 1.25 });
-	gsap.set(".red-bottom", { x: -200, y: 120, scale: 1.25 });
-	gsap.set(".red-top", { x: 120, y: -240, scale: 1.25 });
-	*/
 	gsap.registerPlugin(ScrollTrigger);
-	/*
+	
 	const tl = gsap.timeline();
 	tl
 		.to(".animate-text-challenging", {
@@ -148,7 +97,6 @@ if (hero) {
 		.to(".red-bottomleft", { x: 10.865, y: 70.109, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomright", { x: 85.712, y: 99.635, scale: 1, duration: 3 }, "<")
 		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<");
-	*/
 	
 	const heroHeadings = gsap.utils.toArray(".animate-text");
 	heroHeadings.forEach((text, i) => {
