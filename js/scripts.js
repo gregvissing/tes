@@ -23,6 +23,25 @@ const hero = document.getElementById("hero");
 
 if (hero) {
 	// Hero - Text animation
+	gsap.set(".blue-topleft", {
+		transformOrigin: "top left"
+	});
+	gsap.set(".blue-topright", {
+		transformOrigin: "top left"
+	});
+	gsap.set(".blue-bottomleft", {
+		transformOrigin: "top left"
+	});
+	gsap.set(".blue-bottomright", {
+		transformOrigin: "top left"
+	});
+	gsap.set(".blue-top", {
+		transformOrigin: "top left"
+	});
+	gsap.set(".blue-bottom", {
+		transformOrigin: "top left"
+	});
+	
 	/*
 	gsap.set("svg#hero-svg", { y: 10 });
 	gsap.set(".blue-topleftt", {
@@ -75,7 +94,7 @@ if (hero) {
 	gsap.set(".red-top", { x: 120, y: -240, scale: 1.25 });
 	*/
 	gsap.registerPlugin(ScrollTrigger);
-
+	/*
 	const tl = gsap.timeline();
 	tl
 		.to(".animate-text-challenging", {
@@ -129,7 +148,8 @@ if (hero) {
 		.to(".red-bottomleft", { x: 10.865, y: 70.109, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomright", { x: 85.712, y: 99.635, scale: 1, duration: 3 }, "<")
 		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<");
-
+	*/
+	
 	const heroHeadings = gsap.utils.toArray(".animate-text");
 	heroHeadings.forEach((text, i) => {
 		gsap.from(text, {
