@@ -43,7 +43,7 @@ if (hero) {
 	});
 	
 	gsap.registerPlugin(ScrollTrigger);
-	/*
+	
 	const tl = gsap.timeline();
 	tl
 		.to(".animate-text-challenging", {
@@ -97,7 +97,7 @@ if (hero) {
 		.to(".red-bottomleft", { x: 10.865, y: 70.109, scale: 1, duration: 3 }, "<")
 		.to(".red-bottomright", { x: 85.712, y: 99.635, scale: 1, duration: 3 }, "<")
 		.to("svg#hero-svg", { x: -150, scale: 0.6, duration: 3 }, "<");
-	*/
+	
 	const heroHeadings = gsap.utils.toArray(".animate-text");
 	heroHeadings.forEach((text, i) => {
 		gsap.from(text, {
